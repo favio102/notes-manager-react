@@ -1,0 +1,16 @@
+{
+  "notes": [
+    {
+      "id": 2,
+      "title": "a titleeeeeeeeee",
+      "content": "any content",
+      "created_at": "12/12/12"
+    },
+    {
+      "id": "bb45",
+      "title": "AAAAAAAAAAA",
+      "content": "Some noteAAAAAAA content",
+      "created_at": "01/01/2022"
+    }
+  ]
+}
