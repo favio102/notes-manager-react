@@ -1,3 +1,3 @@
 export function NoteCreate(props) {
-  <> Note create</>
+  return <> ----Note create</>;
 }
