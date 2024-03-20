@@ -1,3 +1,7 @@
+.container {
+  background: rgb(70, 94, 252);
+  width: 900px;
+}
 .icon {
   cursor: pointer;
 }
