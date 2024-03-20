@@ -1,3 +1,3 @@
 export function PageNotFound(props) {
-  return <>Page not found</>
+  return <>PAGE NOT FOUND PAGE NOT FOUND PAGE NOT FOUND PAGE NOT FOUND</>
 }

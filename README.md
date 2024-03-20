@@ -74,3 +74,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 <!-- https://www.npmjs.com/package/json-server -->
 <!-- npm install -g json-server -->
 <!-- install thunder client extension VSCD to handle api -->
+ <!-- npm run dev-server      -->

@@ -1,3 +1,3 @@
 export function NoteBrowse(props) {
-  return <>Note Browse</>
+  return <>NOTE BROWSE HOME HOME HOME HOME HOME</>
 }
