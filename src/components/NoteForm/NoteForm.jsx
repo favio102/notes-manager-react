@@ -1,7 +1,7 @@
-import { PencilFill, TrashFill } from "react-bootstrap-icons";
-import s from "./style.module.css";
 import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
 import { useState } from "react";
+import { PencilFill, TrashFill } from "react-bootstrap-icons";
+import s from "./style.module.css";
 
 export function NoteForm({ title, onClickEdit, onClickDelete, onSubmit }) {
   const [formValues, setFormValues] = useState({ title: "", content: "" });

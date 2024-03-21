@@ -8,13 +8,14 @@ import s from "./style.module.css";
 
 export function App() {
   const dispatch = useDispatch();
-  async function fetchAllNotes() {
+  async function fetchNotes() {
     const noteList = await NoteAPI.fetchAll();
     dispatch(setNoteList(noteList));
   }
   useEffect(() => {
-    fetchAllNotes();
-  },[]);
+    fetchNotes();
+  }, []);
+  
   return (
     <div>
       <Header />
