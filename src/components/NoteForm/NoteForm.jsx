@@ -1,15 +1,25 @@
 import { PencilFill, TrashFill } from "react-bootstrap-icons";
 import s from "./style.module.css";
 import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
+import { useState } from "react";
 
-export function NoteForm({ title }) {
+export function NoteForm({ title, onClickEdit, onClickDelete, onSubmit }) {
+  const [formValues, setFormValues] = useState({ title: "", content: "" });
+
+  const updateFormValues = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setFormValues({ ...formValues, [name]: value });
+  };
+
   const actionIcons = (
     <>
       <div className="col-1">
-        <PencilFill size="20" className={s.icon} />
+        {onClickEdit && <PencilFill size="20" className={s.icon} />}
       </div>
       <div className="col-1">
-        <TrashFill size="20" className={s.icon} />
+        {onClickDelete && <TrashFill size="20" className={s.icon} />}
       </div>
     </>
   );
@@ -17,21 +27,32 @@ export function NoteForm({ title }) {
   const titleInput = (
     <>
       <label className="form-label">Title</label>
-      <input type="text" name="title" className="form-control bg-light" />
+      <input
+        onChange={updateFormValues}
+        type="text"
+        name="title"
+        className="form-control bg-light"
+      />
     </>
   );
 
   const contentInput = (
     <>
       <label className="form-label">Content</label>
-      <textarea type="text" name="content" className="bg-light form-control" rows="5" />
+      <textarea
+        onChange={updateFormValues}
+        type="text"
+        name="content"
+        className="bg-light form-control"
+        rows="5"
+      />
     </>
   );
 
   const submitBtn = (
     <>
       <div className="text-end">
-        <ButtonPrimary>Submit</ButtonPrimary>
+        <ButtonPrimary onClick={()=> onSubmit(formValues)}>Submit</ButtonPrimary>
       </div>
     </>
   );
@@ -47,7 +68,7 @@ export function NoteForm({ title }) {
 
       <div className={`mb-3 ${s.title_input_container}`}>{titleInput}</div>
       <div className="mb-3">{contentInput}</div>
-      {submitBtn}
+      {onSubmit && submitBtn}
     </div>
   );
 }
