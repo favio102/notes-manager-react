@@ -1,28 +1,10 @@
 {
   "notes": [
     {
-      "id": 1,
-      "title": "a titleeeeeeeeee",
-      "content": "any content",
-      "created_at": "12/12/12"
-    },
-    {
-      "id": 2,
-      "title": "AAAAAAAAAAA",
-      "content": "Some noteAAAAAAA content",
-      "created_at": "01/01/2022"
-    },
-    {
-      "id": 3,
-      "title": "This a new test",
-      "content": "Some test lorem lorem lorem lorem lorem lorem lorem",
-      "created_at": "00/00/2002"
-    },
-    {
-      "id": 4,
-      "title": "Another test",
-      "content": "lorem lorem lorem lorem lorem lorem lorem lorem lorem",
-      "created_at": "00/00/2002"
+      "id": "e98e",
+      "title": "data base ",
+      "content": "cleaned",
+      "created_at": "3/21/2024"
     }
   ]
 }
