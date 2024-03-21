@@ -14,7 +14,7 @@ export function App() {
   }
   useEffect(() => {
     fetchAllNotes();
-  }, []);
+  },[]);
   return (
     <div>
       <Header />
