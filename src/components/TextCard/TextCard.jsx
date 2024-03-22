@@ -2,7 +2,7 @@ import { useState } from "react";
 import s from "./styles.module.css";
 import { Trash } from "react-bootstrap-icons";
 
-export function TextCard({ title, subtitle, content, onClick, onClickTrash }) {
+export function TextCard({ title, content, subtitle, onClick, onClickTrash }) {
   const [isCardHovered, setIsCardHovered] = useState(false);
   const [isTrashHovered, setIsTrashHovered] = useState(false);
 
@@ -29,7 +29,7 @@ export function TextCard({ title, subtitle, content, onClick, onClickTrash }) {
             onMouseLeave={() => setIsTrashHovered(false)}
           />
         </div>
-        <h6 className='card-subtitle mb-2 text-muted'>{subtitle}</h6>
+        <h6 className="card-subtitle mb-2 text-muted">{subtitle}</h6>
         <p className={`card-text ${s.text_content}`}>{content}</p>
       </div>
     </div>
