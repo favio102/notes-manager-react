@@ -1,0 +1,13 @@
+// biome-ignore lint/complexity/noStaticOnlyClass: <explanation>
+export class ValidatorService {
+  static min(inputValue, min) {
+    if (inputValue.length < min) {
+      return `Can't be less than ${min} characters.`;
+    }
+  }
+  static max(inputValue, max) {
+    if (inputValue.length > max) {
+      return `Can't be maximum than ${max} characters.`;
+    }
+  }
+}
