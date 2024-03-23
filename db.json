@@ -2,14 +2,14 @@
   "notes": [
     {
       "id": "3c6d",
-      "title": "test",
-      "content": "setet",
+      "title": "prod",
+      "content": "env",
       "created_at": "3/22/2024"
     },
     {
       "id": "85f2",
-      "title": "Memories",
-      "content": "This a new memory",
+      "title": "new edit",
+      "content": "new new edit",
       "created_at": "3/23/2024"
     },
     {

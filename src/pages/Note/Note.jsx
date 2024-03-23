@@ -1,20 +1,22 @@
 import { NoteForm } from "components/NoteForm/NoteForm";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { PencilFill, TrashFill } from "react-bootstrap-icons";
+import { PencilFill } from "react-bootstrap-icons";
+import { NoteAPI } from "api/note-api";
+import { updateNote } from "store/notes/notes-slice";
 
 export function Note(props) {
+  const dispatch = useDispatch();
   const { noteId } = useParams();
-  // console.log(noteId);
   const note = useSelector((store) =>
     store.notesSlice.noteList.find((note) => note.id === noteId)
   );
-
   const [isEditable, setIsEditable] = useState(false);
-
-  const submit = () => {
-    alert("submit");
+  const submit = async (formValues) => {
+    const updatedNote = await NoteAPI.updateById(note.id, formValues);
+    dispatch(updateNote(updatedNote));
+    setIsEditable(false);
   };
 
   return (
