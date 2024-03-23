@@ -1,13 +1,14 @@
 import { NoteForm } from "components/NoteForm/NoteForm";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { PencilFill } from "react-bootstrap-icons";
 import { NoteAPI } from "api/note-api";
-import { updateNote } from "store/notes/notes-slice";
+import { deleteNote, updateNote } from "store/notes/notes-slice";
 
 export function Note(props) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { noteId } = useParams();
   const note = useSelector((store) =>
     store.notesSlice.noteList.find((note) => note.id === noteId)
@@ -18,6 +19,14 @@ export function Note(props) {
     dispatch(updateNote(updatedNote));
     setIsEditable(false);
   };
+
+  async function deleteNote_() {
+    if (window.confirm("Are you sure to delete the Note?")) {
+      NoteAPI.deleteById(note.id);
+      dispatch(deleteNote(note));
+      navigate("/");
+    }
+  }
 
   return (
     <div className="d-flex justify-content-center">
@@ -33,7 +42,7 @@ export function Note(props) {
           }
           note={note}
           onClickEdit={() => setIsEditable(!isEditable)}
-          onClickDelete={() => alert("Item was deleted")}
+          onClickDelete={deleteNote_}
           onSubmit={isEditable && submit}
         />
       )}

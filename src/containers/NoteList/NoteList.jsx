@@ -1,11 +1,20 @@
 import { TextCard } from "components/TextCard/TextCard";
-import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
 import s from "./style.module.css";
+import { NoteAPI } from "api/note-api";
+import { deleteNote } from "store/notes/notes-slice";
 
 export function NoteList() {
   const noteList = useSelector((store) => store.notesSlice.noteList);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  async function deleteNote_(note) {
+    if (window.confirm("Are you sure to delete the Note?")) {
+      NoteAPI.deleteById(note.id);
+      dispatch(deleteNote(note));
+    }
+  }
 
   return (
     <div className="row justify-content-start">
@@ -15,7 +24,7 @@ export function NoteList() {
             title={note.title}
             subtitle={note.created_at}
             content={note.content}
-            onClickTrash={() => alert("onclick trash")}
+            onClickTrash={() => deleteNote_(note)}
             onClick={() => navigate("note/" + note.id)}
           />
         </div>
