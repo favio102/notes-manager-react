@@ -1,12 +1,11 @@
 import { TextCard } from "components/TextCard/TextCard";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import s from "./style.module.css";
 import { NoteAPI } from "api/note-api";
 import { deleteNote } from "store/notes/notes-slice";
 
-export function NoteList() {
-  const noteList = useSelector((store) => store.notesSlice.noteList);
+export function NoteList({ noteList }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   async function deleteNote_(note) {
