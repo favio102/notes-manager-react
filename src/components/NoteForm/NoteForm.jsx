@@ -2,15 +2,38 @@ import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
 import { useState } from "react";
 import { PencilFill, TrashFill } from "react-bootstrap-icons";
 import s from "./style.module.css";
+import { ValidatorService } from "services/validator";
+import { FieldError } from "components/FieldError/FieldError";
+
+const VALIDATOR = {
+  title: (value) => {
+    return ValidatorService.min(value, 3) || ValidatorService.max(value, 20);
+  },
+  content: (value) => {
+    return ValidatorService.min(value, 3);
+  },
+};
 
 export function NoteForm({ title, onClickEdit, onClickDelete, onSubmit }) {
   const [formValues, setFormValues] = useState({ title: "", content: "" });
+  const [formErrors, setFormErrors] = useState({
+    title: undefined,
+    content: undefined,
+  });
 
   const updateFormValues = (e) => {
     const name = e.target.name;
     const value = e.target.value;
 
     setFormValues({ ...formValues, [name]: value });
+    validate(name, value)
+  };
+
+  const validate = (fieldName, fieldValue) => {
+    setFormErrors({
+      ...formErrors,
+      [fieldName]: VALIDATOR[fieldName](fieldValue),
+    });
   };
 
   const actionIcons = (
@@ -25,7 +48,7 @@ export function NoteForm({ title, onClickEdit, onClickDelete, onSubmit }) {
   );
 
   const titleInput = (
-    <>
+    <div className="mb-5">
       <label className="form-label">Title</label>
       <input
         onChange={updateFormValues}
@@ -33,11 +56,12 @@ export function NoteForm({ title, onClickEdit, onClickDelete, onSubmit }) {
         name="title"
         className="form-control bg-light"
       />
-    </>
+      <FieldError msg={formErrors.title}/>
+    </div>
   );
 
   const contentInput = (
-    <>
+    <div className="mb-5">
       <label className="form-label">Content</label>
       <textarea
         onChange={updateFormValues}
@@ -46,13 +70,16 @@ export function NoteForm({ title, onClickEdit, onClickDelete, onSubmit }) {
         className="bg-light form-control"
         rows="5"
       />
-    </>
+      <FieldError msg={formErrors.content}/>
+    </div>
   );
 
   const submitBtn = (
     <>
       <div className="text-end">
-        <ButtonPrimary onClick={()=> onSubmit(formValues)}>Submit</ButtonPrimary>
+        <ButtonPrimary onClick={() => onSubmit(formValues)}>
+          Submit
+        </ButtonPrimary>
       </div>
     </>
   );

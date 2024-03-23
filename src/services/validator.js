@@ -7,7 +7,7 @@ export class ValidatorService {
   }
   static max(inputValue, max) {
     if (inputValue.length > max) {
-      return `Can't be maximum than ${max} characters.`;
+      return `Can't be more than ${max} characters.`;
     }
   }
 }
