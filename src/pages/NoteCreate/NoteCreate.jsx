@@ -19,7 +19,7 @@ export function NoteCreate(props) {
   };
   return (
     <div className="d-flex justify-content-center">
-      <NoteForm onSubmit={submit} title="New Noteeee" />
+      <NoteForm onSubmit={submit} title="New Note" />
     </div>
   );
 }

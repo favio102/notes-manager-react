@@ -10,7 +10,7 @@ export function Note(props) {
   );
 
   return (
-    <>
+    <div className="d-flex justify-content-center">
       {note && (
         <NoteForm
         isEditable={false}
@@ -20,6 +20,6 @@ export function Note(props) {
           onClickEdit={()=>alert('edit')}
         />
       )}
-    </>
+    </div>
   );
 }
