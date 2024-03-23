@@ -22,10 +22,13 @@ export function NoteForm({
   onClickDelete,
   onSubmit,
 }) {
-  const [formValues, setFormValues] = useState({ title: "", content: "" });
+  const [formValues, setFormValues] = useState({
+    title: note?.title,
+    content: note?.content,
+  });
   const [formErrors, setFormErrors] = useState({
-    title: true,
-    content: true,
+    title: note?.title ? undefined : true,
+    content: note?.content ? undefined : true,
   });
 
   const updateFormValues = (e) => {
@@ -75,6 +78,7 @@ export function NoteForm({
         type="text"
         name="title"
         className="form-control bg-light"
+        value={formValues.title}
       />
       <FieldError msg={formErrors.title} />
     </div>
@@ -89,6 +93,7 @@ export function NoteForm({
         name="content"
         className="bg-light form-control"
         rows="5"
+        value={formValues.content}
       />
       <FieldError msg={formErrors.content} />
     </div>
@@ -117,7 +122,9 @@ export function NoteForm({
       <div className={`mb-3 ${s.title_input_container}`}>
         {isEditable && titleInput}
       </div>
-      <div className="mb-3">{isEditable ? contentInput : <pre>{note.content}</pre>}</div>
+      <div className="mb-3">
+        {isEditable ? contentInput : <pre>{note.content}</pre>}
+      </div>
       {onSubmit && submitBtn}
     </div>
   );
