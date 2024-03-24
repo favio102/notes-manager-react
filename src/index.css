@@ -1,5 +1,8 @@
 body{
   font-family: Roboto;
   background-color: #e6eefe;
+}
+
+.root {
   height: 100vh;
 }
