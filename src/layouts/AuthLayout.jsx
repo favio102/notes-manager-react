@@ -5,7 +5,7 @@ export function AuthLayout({ children }) {
   const header = (
     <div className={s.header}>
       <LogoSVG className={s.logoTop} />
-      <h3 className={s.topTitle}>NoMatic</h3>
+      <h5 className='pt-1'>NoMatic</h5>
     </div>
   );
 
@@ -25,7 +25,7 @@ export function AuthLayout({ children }) {
         {header}
         {children}
       </div>
-      <div className={s.rightSection}>{background}</div>
+      <div className={`${s.rightSection} d-none d-lg-flex`}>{background}</div>
     </div>
   );
 }
