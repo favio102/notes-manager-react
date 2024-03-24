@@ -1,0 +1,50 @@
+.root {
+  display: flex;
+  height: 100vh;
+}
+
+.logoTop {
+  fill: #0d6efd;
+  height: 30px;
+  width: 30px;
+  margin: 20px;
+}
+
+.topTitle {
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+}
+
+.leftSection {
+  flex: 4;
+}
+
+.rightSection {
+  flex: 5;
+  background-color: rgb(118, 76, 158);
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.backgroundTitle {
+  margin: 0;
+  text-align: center;
+  padding-top: 4px;
+  color: white;
+}
+
+.logoTitle {
+  fill: orange;
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+  vertical-align: baseline;
+}
