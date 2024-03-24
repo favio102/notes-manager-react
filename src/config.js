@@ -1,8 +1,8 @@
 export const firebaseConfig = {
-  apiKey: "AIzaSyCx4BcoS4fRyBxGi_I_H68xgaEFGhxggNo",
-  authDomain: "note-manager-react-bc4f5.firebaseapp.com",
-  projectId: "note-manager-react-bc4f5",
-  storageBucket: "note-manager-react-bc4f5.appspot.com",
-  messagingSenderId: "636782082577",
-  appId: "1:636782082577:web:38e43ec25c19e0a9f64fb0"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_ID,
 };
