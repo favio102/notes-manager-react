@@ -3,7 +3,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { FirebaseApp } from "services/firebase";
+import { FirebaseApp } from "utils/firebase";
 
 export class AuthAPI {
   static async signin(email, password) {
@@ -12,7 +12,7 @@ export class AuthAPI {
       email,
       password
     );
-    return response.user.toJSON;
+    return response.user.toJSON();
   }
 
   static async singup(email, password) {
@@ -21,7 +21,7 @@ export class AuthAPI {
       email,
       password
     );
-    return response.user.toJSON;
+    return response.user.toJSON();
   }
 
   static async singnout() {
