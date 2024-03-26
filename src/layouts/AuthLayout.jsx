@@ -5,7 +5,7 @@ export function AuthLayout({ children }) {
   const header = (
     <div className={s.header}>
       <LogoSVG className={s.logoTop} />
-      <h5 className='pt-1'>NoMatic</h5>
+      <h5 className="pt-1">NoMatic</h5>
     </div>
   );
 

@@ -1,4 +1,10 @@
-export function ButtonPrimary({ className, type, children, onClick, isDisabled }) {
+export function ButtonPrimary({
+  className,
+  type,
+  children,
+  onClick,
+  isDisabled,
+}) {
   return (
     <button
       disabled={isDisabled}

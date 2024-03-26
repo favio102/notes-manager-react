@@ -27,7 +27,7 @@ export function Signup() {
         toast("error", error.message);
       }
     } else {
-      toast("error", 'Password do not match, try again.');
+      toast("error", "Password do not match, try again.");
     }
   };
 

@@ -1,12 +1,6 @@
 {
   "notes": [
     {
-      "id": "e599",
-      "title": "test",
-      "content": "testtestes",
-      "created_at": "3/23/2024"
-    },
-    {
       "id": "bc76",
       "title": "aminal",
       "content": "abcd",
@@ -22,6 +16,12 @@
       "id": "e70d",
       "title": "ULTIMATE TEST NIGHT",
       "content": "THIS A TEST THUESDAY",
+      "created_at": "3/26/2024"
+    },
+    {
+      "id": "f9e2",
+      "title": "Art of Refactor",
+      "content": "The art of code of refactor.",
       "created_at": "3/26/2024"
     }
   ]

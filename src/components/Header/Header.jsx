@@ -1,7 +1,6 @@
 import { Logo } from "components/Logo/Logo";
 import s from "./style.module.css";
 import logoSrc from "assets/images/logo.jpeg";
-import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "store/auth/auth-selectors";
@@ -15,14 +14,21 @@ export function Header(props) {
 
   const signout = () => {
     AuthAPI.signout();
-    dispatch(setUser(null))
-  }
+    dispatch(setUser(null));
+  };
   const renderAuthProfile = () => {
     return (
       <div>
-        <img src={`https://api.dicebear.com/5.x/bottts/svg?seed=${user.email}`} alt="" style={{width: 40}} className="rounded-circle"/>
-        <div className="text-white">Hello, {user.email}</div>
-        <Link onClick={signout} to="#">Signout</Link>
+        <img
+          src={`https://api.dicebear.com/5.x/bottts/svg?seed=${user.email}`}
+          alt=""
+          style={{ width: 60 }}
+          className="rounded-circle"
+        />
+        <div className="text-warning">Hello, {user.email}</div>
+        <Link onClick={signout} to="#">
+          Signout
+        </Link>
       </div>
     );
   };

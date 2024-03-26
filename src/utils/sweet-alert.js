@@ -9,6 +9,6 @@ export async function toast(type, msg) {
     toast: true,
     title: msg,
     color: "yellow",
-    background: 'black'
+    background: "black",
   });
 }

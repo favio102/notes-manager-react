@@ -21,7 +21,6 @@ function serializeUser(user) {
     email: user.email,
     emailVerified: user.emailVerified,
     displayName: user.displayName,
-    // Add other necessary fields
   };
 }
 

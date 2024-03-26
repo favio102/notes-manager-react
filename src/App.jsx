@@ -8,7 +8,6 @@ import s from "./style.module.css";
 import { withAuthRequired } from "hoc/withAuthRequired";
 import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
 
-
 export function App() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,7 +22,7 @@ export function App() {
   return (
     <div>
       <Header />
-      <ButtonPrimary  className={s.btn} onClick={() => navigate("/note/new")}>
+      <ButtonPrimary className={s.btn} onClick={() => navigate("/note/new")}>
         +
       </ButtonPrimary>
       <div className={s.workspace}>
