@@ -15,7 +15,7 @@ export class AuthAPI {
     return response.user.toJSON();
   }
 
-  static async singup(email, password) {
+  static async signup(email, password) {
     const response = await createUserWithEmailAndPassword(
       FirebaseApp.auth,
       email,
@@ -24,7 +24,7 @@ export class AuthAPI {
     return response.user.toJSON();
   }
 
-  static async singnout() {
+  static async signout() {
     signOut(FirebaseApp.auth);
   }
 }
