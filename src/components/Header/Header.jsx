@@ -21,7 +21,7 @@ export function Header(props) {
     return (
       <div>
         <img src={`https://api.dicebear.com/5.x/bottts/svg?seed=${user.email}`} alt="" style={{width: 40}} className="rounded-circle"/>
-        <div>Hello, {user.email}</div>
+        <div className="text-white">Hello, {user.email}</div>
         <Link onClick={signout} to="#">Signout</Link>
       </div>
     );
