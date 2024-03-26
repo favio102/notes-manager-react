@@ -2,7 +2,7 @@ import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
 import { useState } from "react";
 import { PencilFill, TrashFill } from "react-bootstrap-icons";
 import s from "./style.module.css";
-import { ValidatorService } from "services/validator";
+import { ValidatorService } from "utils/validator";
 import { FieldError } from "components/FieldError/FieldError";
 
 const VALIDATOR = {
@@ -23,8 +23,8 @@ export function NoteForm({
   onSubmit,
 }) {
   const [formValues, setFormValues] = useState({
-    title: note?.title || '',
-    content: note?.content || '',
+    title: note?.title || "",
+    content: note?.content || "",
   });
   const [formErrors, setFormErrors] = useState({
     title: note?.title ? undefined : true,

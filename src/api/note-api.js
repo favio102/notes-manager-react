@@ -2,8 +2,7 @@ import axios from "axios";
 
 const BASE_URL = "http://localhost:3200/notes";
 
-// biome-ignore lint/complexity/noStaticOnlyClass: <explanation>
-export  class NoteAPI {
+export class NoteAPI {
   static async create(formValues) {
     return (await axios.post(`${BASE_URL}`, formValues)).data;
   }

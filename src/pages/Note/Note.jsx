@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { PencilFill } from "react-bootstrap-icons";
 import { NoteAPI } from "api/note-api";
 import { deleteNote, updateNote } from "store/notes/notes-slice";
+import { withAuthRequired } from "hoc/withAuthRequired";
 
 export function Note(props) {
   const dispatch = useDispatch();
@@ -49,3 +50,5 @@ export function Note(props) {
     </div>
   );
 }
+
+export const ProtectedNote = withAuthRequired(Note);
