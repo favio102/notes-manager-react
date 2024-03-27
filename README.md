@@ -27,4 +27,4 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 <!-- firebase documentation
 protect firestore backend
 https://firebase.google.com/docs/rules/basics  allow read, write: if request.auth != null;-->
-remove strict mode because useEffect is runnig twice
+<!-- remove strict mode because useEffect is runnig twice -->
