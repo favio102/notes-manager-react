@@ -17,11 +17,9 @@ export function NoteBrowse(props) {
       .trim()
       .toUpperCase()
       .includes(searchTerm.trim().toUpperCase());
-    const containsDate = note.created_at
-      .trim()
-      .toUpperCase()
-      .includes(searchTerm.trim().toUpperCase());
-    return containsTitle || containsContent || containsDate;
+    // const formattedDate = new Date(note.created_at).toString();
+    // const containsDate = formattedDate.trim().includes(searchTerm.trim());
+    return containsTitle || containsContent;
   });
 
   return (
