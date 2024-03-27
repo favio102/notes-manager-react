@@ -24,3 +24,6 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
  <!-- npm run dev-server      -->
  <!-- avatar creator -->
  <!-- https://api.dicebear.com/5.x/bottts/svg?seed=234 -->
+<!-- firebase documentation
+protect firestore backend
+https://firebase.google.com/docs/rules/basics  allow read, write: if request.auth != null;-->
