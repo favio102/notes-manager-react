@@ -17,6 +17,8 @@ export function NoteBrowse(props) {
       .trim()
       .toUpperCase()
       .includes(searchTerm.trim().toUpperCase());
+    // const formattedDate = new Date(note.created_at).toString();
+    // const containsDate = formattedDate.trim().includes(searchTerm.trim());
     return containsTitle || containsContent;
   });
 

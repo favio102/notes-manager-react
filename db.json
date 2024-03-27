@@ -1,12 +1,6 @@
 {
   "notes": [
     {
-      "id": "bc76",
-      "title": "aminal",
-      "content": "abcd",
-      "created_at": "3/23/2024"
-    },
-    {
       "id": "eaac",
       "title": "react - states",
       "content": "testes",
@@ -23,6 +17,12 @@
       "title": "Art of Refactor",
       "content": "The art of code of refactor.",
       "created_at": "3/26/2024"
+    },
+    {
+      "id": "db56",
+      "title": "Wednesday Homework",
+      "content": "- Read\n- Write\n- Speaking practice \n- Typing test",
+      "created_at": "3/27/2024"
     }
   ]
 }

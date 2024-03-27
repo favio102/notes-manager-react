@@ -1,11 +1,12 @@
 import { Logo } from "components/Logo/Logo";
 import s from "./style.module.css";
 import logoSrc from "assets/images/logo.jpeg";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "store/auth/auth-selectors";
 import { AuthAPI } from "api/auth";
 import { setUser } from "store/auth/auth-slice";
+import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
 
 export function Header(props) {
   const navigate = useNavigate();
@@ -25,10 +26,12 @@ export function Header(props) {
           style={{ width: 60 }}
           className="rounded-circle"
         />
-        <div className="text-warning">Hello, {user.email}</div>
-        <Link onClick={signout} to="#">
+        <div className="text-warning fs-5 font-monospace">
+          Hello {user.email}
+        </div>
+        <ButtonPrimary onClick={signout} to="#" className="btn-sm text-white">
           Signout
-        </Link>
+        </ButtonPrimary>
       </div>
     );
   };
