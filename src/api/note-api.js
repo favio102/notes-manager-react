@@ -1,6 +1,6 @@
 import { FirebaseApp } from "utils/firebase";
 import {
-  QuerySnapshot,
+  // QuerySnapshot,
   addDoc,
   collection,
   deleteDoc,

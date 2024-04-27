@@ -20,12 +20,13 @@ export function App() {
     return () => {
       unsub();
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div>
       <Header />
-      <ButtonPrimary className={s.btn} onClick={() => navigate("/note/new")}>
+      <ButtonPrimary className={s.btn} onClick={() => navigate("/home/note/new")}>
         +
       </ButtonPrimary>
       <div className={s.workspace}>

@@ -24,7 +24,7 @@ export function NoteList({ noteList }) {
             subtitle={note.created_at}
             content={note.content}
             onClickTrash={() => deleteNote_(note)}
-            onClick={() => navigate("note/" + note.id)}
+            onClick={() => navigate("/home/note/" + note.id)}
           />
         </div>
       ))}

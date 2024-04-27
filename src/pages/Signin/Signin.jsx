@@ -20,7 +20,7 @@ export function Signin() {
       const user = await AuthAPI.signin(email, password);
       dispatch(setUser(user));
       await toast("success", "Successfully logged");
-      nagivate("/");
+      nagivate("/home");
     } catch (error) {
       console.log("Auth failed");
       toast("error", error.message);

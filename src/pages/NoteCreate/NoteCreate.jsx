@@ -16,7 +16,7 @@ export function NoteCreate(props) {
     });
     dispatch(addNote(createdNote));
     alert("The note has been created");
-    navigate("/");
+    navigate("/home");
   };
   return (
     <div className="d-flex justify-content-center">

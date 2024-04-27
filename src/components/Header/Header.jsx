@@ -39,7 +39,7 @@ export function Header(props) {
     <div className={`row ${s.container}`}>
       <div className="col-xs-12 col-sm-4">
         <Logo
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/home")}
           title="NoMatic"
           subtitle={"Manage your notes"}
           image={logoSrc}

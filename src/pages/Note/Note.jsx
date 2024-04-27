@@ -25,7 +25,7 @@ export function Note(props) {
     if (window.confirm("Are you sure to delete the Note?")) {
       NoteAPI.deleteById(note.id);
       dispatch(deleteNote(note));
-      navigate("/");
+      navigate("/home");
     }
   }
 

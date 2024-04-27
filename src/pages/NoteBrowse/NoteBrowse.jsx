@@ -36,7 +36,7 @@ export function NoteBrowse(props) {
         <div className="d-flex justify-content-center">
           <span>
             You don't have any note. Do you want to{" "}
-            <Link to="/note/new">create one</Link>?
+            <Link to="/home/note/new">create one</Link>?
           </span>
         </div>
       )}
