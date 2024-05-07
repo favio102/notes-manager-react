@@ -10,7 +10,7 @@ export function ButtonPrimary({
       disabled={isDisabled}
       onClick={onClick}
       type={type}
-      className={`btn btn-outline-primary rounded-pill fw-bold btn-lg py-2 \\px-xl-5\\ ${className}`}
+      className={`btn btn-outline-info rounded-pill fw-bold btn-lg py-2 \\px-xl-5\\ ${className}`}
     >
       {children}
     </button>

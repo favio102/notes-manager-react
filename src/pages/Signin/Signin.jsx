@@ -45,6 +45,10 @@ export function Signin() {
         <span>
           Don't have an account yet? <Link to="/signup">Signup</Link>
         </span>
+        <span className="fw-lighter text-info fs-6 opacity-25">
+          Account for testing purpose: <br />
+          test1@gmail.com && test1test1
+        </span>
       </form>
     </div>
   );
