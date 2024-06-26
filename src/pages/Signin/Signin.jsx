@@ -45,7 +45,7 @@ export function Signin() {
         <span>
           Don't have an account yet? <Link to="/signup">Signup</Link>
         </span>
-        <span className="fw-lighter fs-6 text-muted">
+        <span className="fw-lighter fs-6 text-success">
           Account for testing purpose: <br />
           test1@gmail.com && test1test1
         </span>
