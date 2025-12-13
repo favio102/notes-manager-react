@@ -232,7 +232,12 @@ Enables absolute imports from the `src` directory.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions from the community! To ensure a smooth process, please follow these basic steps:
+
+1. **Open an Issue**: For bug reports or feature suggestions, please first open an [Issue](https://github.com/favio102/notes-manager-react/issues) to discuss your proposed change or problem.
+2. **Fork the Repository**: Create your own fork of the project.
+3. **Implement Fixes**: Create a new branch (`git checkout -b feature/your-feature-name` or `git checkout -b fix/issue-number`) and implement your changes.
+4. **Submit a Pull Request (PR)**: Target the main branch with your pull request, ensuring your branch is up-to-date and all tests pass.
 
 ## 📝 License
 
