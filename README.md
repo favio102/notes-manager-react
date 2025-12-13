@@ -39,7 +39,7 @@ A full-featured notes management application with Firebase authentication, real-
 - **json-server** - Mock API server (optional development tool)
 
 ### UI & UX
-- **Bootstrap** `5.2.0` - CSS framework
+- **Bootstrap** `5.2.0` - CSS framework (loaded via CDN)
 - **SweetAlert2** `^11.10.7` - Beautiful alerts
 
 ## 📁 Project Structure
@@ -219,7 +219,7 @@ Enables absolute imports from the `src` directory.
 
 - **Change validation rules**: Edit `src/components/NoteForm/NoteForm.jsx` (VALIDATOR object)
 - **Adjust persistence**: Modify the `whitelist` in `src/store/index.js`
-- **Update routes**: Edit route configuration in `src/index.js`
+- **Update routes**: Edit the Routes component in `src/index.js` (lines 25-34)
 - **Customize theme**: Update Bootstrap classes or add custom styles
 
 ## 🔒 Security Features
